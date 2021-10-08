@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterLoginController;
+use App\Http\Controllers\Admin\Spatie\PermissionsController;
+use App\Http\Controllers\Admin\Spatie\RoleController;
+
+
+
 
 
 /*
@@ -33,6 +38,11 @@ Route::post('/register/user', [RegisterLoginController::class,'register'])->name
 
 Route::prefix('admin')->name('admin.')->middleware(['auth'])->namespace('Admin')->group(function(){
 Route::get('/dashboard', [HomeController::class,'dashboard'])->name('dashboard');
+Route::get('/roles', [RoleController::class,'roles'])->name('roles');
+Route::post('/roles/save', [RoleController::class,'save'])->name('roles.save');
+Route::get('/permissions', [PermissionsController::class,'permissions'])->name('permissions');
+Route::post('/permissions/save', [PermissionsController::class,'save'])->name('permissions.save');
+
 
 	 
 });

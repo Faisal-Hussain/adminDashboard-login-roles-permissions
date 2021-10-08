@@ -12,6 +12,15 @@
               </li>
             </ul>
           </li>
+          <li class=" nav-item"><a href="#"><i class="feather icon-monitor"></i><span class="menu-title" data-i18n="Templates">Roles&Permissions</span></a>
+            <ul class="menu-content">
+              
+              <li class=" nav-item"><a href="{{route('admin.roles')}}"><i class="fa fa-list"></i><span class="menu-title" data-i18n="Email Application">Roles</span></a>
+              </li>
+              <li class=" nav-item"><a href="{{route('admin.permissions')}}"><i class="fa fa-book"></i><span class="menu-title" data-i18n="Email Application">Permissions</span></a>
+              </li>
+            </ul>
+          </li>
           <li class=" nav-item"><a href="#"><i class="feather icon-monitor"></i><span class="menu-title" data-i18n="Templates">Templates</span></a>
             <ul class="menu-content">
               <li><a class="menu-item" href="#" data-i18n="Vertical">Vertical</a>
